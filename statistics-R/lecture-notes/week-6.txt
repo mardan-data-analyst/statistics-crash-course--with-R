@@ -1,0 +1,82 @@
+1. Connection Between Confidence Intervals and Hypothesis Testing
+ Example: Flipping bottle cap
+ Test: H0: p = 0.5
+       HA: p != 0.5 (two-sided)
+ Observations: n = 1000, 
+               ^p = 0.576,
+               |^p - 0.5| = 0.076.
+               
+ Reject H0 since p-value = P(|^p - 0.5| >=0.076) ~~ 
+ P(|Normal(0, 1)| >= 4.81) = 1 / 663000 < 0.05 (say).
+ 
+ Also, 95% C.I. is: ^p +- 1.96 * square root(p(1 - p) / n) =
+ = [0.545, 0.607], which misses 0.5.
+ 
+ Coincidence? - NO!
+ 
+  Example: Human Body Temperatures
+  Test: H0: u (myu) = 37
+        HA: u (myu) != 37 (two-sided)
+  Observations: n = 130, |xbar - 37| = 0.19487, s = 0.407324.
+  Reject H0 since p-value = P(|Xbar - 37| >= 0.19487) ~~
+  P(|t sub 129| >= 5.455) = 1 / 4000000 < 0.05 (say).
+  
+  Also, 95% C.I is: xbar +- 1.979 * square root(s ** 2 / n) = [36.734, 36.876], which misses 37.
+  
+  Coincidence? No!
+  
+  
+  General test: H0: u (myu) = u0,
+                HA : u (myu) = u0.
+  Observations: n, xbar, s, d == |xbar - u0|
+  d - the difference between observed mean and hypothesized mean.
+  Reject H0 if: P(|Xbar| - u0) >= d) <= @.
+  P(|Xbar - u0| / square root(s ** 2 / n >= d / square root(s ** 2 / n)) = P(|t sub n - 1| >= d / square root(s ** 2) / n) <= @.
+  
+  This happens only if: d / square root(s ** 2 / n) >= T sub(@ / 2, n - 1) = @.
+  T - critical value.
+  
+  Meanwhile, (1 - @) C.I for u (myu) is: xbar +- T sub(@/2, n - 1 * square root(s ** 2 / n)).
+  This misses u (myu) when |xbar - u (myu)| >= T @/2, n - 1 * square root(s ** 2 / n).
+  
+  Equivalent! Reject H0 precisely when C.I misses u0 (myu).
+
+2. Matched Pairs
+ In matched pairs, two conditions are compared between the same or two very similar observational or experimental units.
+ Examples:
+ * Two age estimates using different methods on the same skeleton
+ * Pre- and post-test scores on the same person
+ * Measurements in pairs at the same time or place
+ * Compare an outcome with and without a treatment on the same subject (cross-over study)
+ * In a experimental design using matched pairs, it is important to randomize which experimental unit in the pair gets which treatment, or the treatment order if both treatments are being compared on the same experimental unit.
+ * Using matched pairs allows the researcher to control for the variables that differ among independent observational or experimental units.
+ 
+ The result: The variation in the comparisons does not include the variation among observational or experimental units, resulting in greater precision in the estimate of the difference between the treatments or conditions being compared.
+ * Measurements on a mathced pair are not independent, so the analysis must reflect the pairing.
+
+ Example: Let d = Error in age estimate for Suchey-Brooks method - Error in Di Gangi method
+ 
+ Test: H0: ud (myu) = 0
+       HA: u != 0
+       
+ Xd bar = 6.854
+ sd = 11.056
+ n = 398
+ Test statistic: X bar - 0 / s / square root (n) = 
+  = 6.854 - 0 / 11.056 / square root(398) = 12.37
+  
+  t distribution with 397 degrees of freedom.
+  
+  P-value starst with 29 zeros after the decimal point. Extremely small.
+  Conclude: Extremely strong evidence that the mean of the difference between the methods in age estimation is not 0.
+  So the Suchey-Brooks and Di Gangi methods don't give the same mean error in age estimation.
+  95% CI for the mean difference:
+  t(397) 6.854 +- 1.966 * 11.056 / square root(398) = 
+  = [5.76, 7.94]
+  
+  Does not include 0.
+
+3. Comparing Two Proportions
+
+
+4. Comparing Two Means

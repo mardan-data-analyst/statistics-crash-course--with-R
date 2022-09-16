@@ -1,0 +1,53 @@
+1. Introduction to Confidence Intervals
+Real world       Theoretical world
+1000 flips       Statistical model
+576 reds         Binomial (1000, p)
+
+Estimate of p: ^p = 0.576 = 57.6%
+
+What else could p be?
+
+Warning: The probability of one side or the other coming up when a beer cap is flipped depends on how much the cap was bent on opening. Individual results for different beer caps can vary and is an important variable to control.
+
+2. Confidence Intervals for Proportions
+ Example: Flipping a bottle cap
+ 
+ Flip the cap 1000 times, get red 576 times. And so?
+ Let p be the (unknown) true probability of getting red.
+ Estimate: ^p = 576/1000 = 57.6% Confident?
+ 
+ E(^p) = p(good)
+ Var(^p) = p(1 - p) / n = p(1 - p)/1000
+ CLT: Approximately, ^p ~~ Normal(p, p(1 - p)/n)
+ 
+ So, ^p - p / square root(p*(1-p)/n) ~~ Normal(0, 1)
+ P(|^p - p|/|square root(p*(1 - p)/n)| > 1.96) = 0.05 = 5%
+  P(|^p - p|/|square root(p*(1 - p)/n)| <= 1.96) = 0.95 = 95%
+  P(-1.95 <= |^p - p|/|square root(p*(1 - p)/n)| <= 1.96) = 0.95 = 95%
+  P(^p-1.95*square root(p*(1 - p)/n) <= p <= ^p + 1.96*square root(p*(1 - p)/n)) = 0.95 = 95%
+  95% condidence interval for p
+  Lower limit: ^p - 1.95*square root(p*(1 - p)/n),
+  Upper limit: ^p + 1.96*square root(p*(1 - p)/n))
+  
+  Any experiment
+  p = true probaility of success
+  n = number of trials
+  Estimate ^p = # success / # trials
+  
+  ^p - p / square root(p*(1-p)/n) ~~ Normal(0, 1)
+   P(^p-1.95*square root(p*(1 - p)/n) <= p <= ^p + 1.96*square root(p*(1 - p)/n)) = 0.95 = 95%
+  
+  95% confidence interval for p:
+  (^p-1.95*square root(p*(1 - p)/n), ^p + 1.96*square root(p*(1 - p)/n))
+  
+  Problem: p unknown!
+  Solution #1. Substitute ^p for p, get interval:
+  (^p-1.95*square root(^p*(1 - ^p)/n), ^p + 1.96*square root(^p*(1 - ^p)/n))
+  
+  Solution #2. Substitute 1/2 for p, get interval:
+  ^p-1.95*square root(1/2*(1 - 1/2)/n), ^p + 1.96*square root(1/2*(1 - 1/2)/n)) = ^p - 0.98/square root(n), ^p + 0.98/square root(n)
+ 
+3. Sample Size for Estimating a Proportion
+
+4. Confidence Intervals for Means
+5. Robustness of Confidence Intervals

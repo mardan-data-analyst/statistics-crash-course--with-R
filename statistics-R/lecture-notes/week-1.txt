@@ -1,0 +1,19 @@
+Regions:
+The Americas
+Europe & Central Asia
+East Asia & Pasific
+South Asia
+Middle East & Northern Africa
+Sub-Saharan Africa
+
+Week 1
+
+1.1 Five Number Summary (Min., 1st Qu., Medianl, Mean, 3rd Qu., Max.)
+
+1.2 The Centre of the Data and the Effects of Extreme Values (median, mean, trimmed mean)
+
+1.3 The Spread of the Data (range, IQR, variance, standard deviation)
+
+1.4 The Shape of the Data (Normal distribution, Left-skewed and right skewed data)
+
+1.5 Numarical and Categorical variables

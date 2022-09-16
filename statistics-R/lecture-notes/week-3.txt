@@ -1,0 +1,188 @@
+1. The Need for Probability
+
+2. Some Probability Basics
+
+
+3. Probability Distributions
+ Example: Flip two coins
+ Let Y = total number of heads
+ HH, HT, TT
+ P(Y=0) = 1/4
+ P(Y=1) = 1/2
+ P(Y=2) = 1/4
+  Binomial(2, 1/2) (binomial two and a half) distribution
+ 
+ Example: Flip one coin.
+ Let x = 1 if heads, or x = 0 if tails
+ P(x = 1) = 1/2
+ P(x = 0) = 1/2
+  Binomial(1, 1/2) (binomial one a half) or Bernoulli(1/2) distribution
+  
+  Example: Flip a coin three times.
+  Let x = total number of heads.
+  P(x = 0) = 1/8
+  P(x = 1) = 3/8
+  P(x = 2) = 3/8,
+  P(x = 3) = 1/8
+   Binomial(3, 1/2) (binomial three and a half) distribution
+   
+   Example: Flip bottle cap
+   Suppose we knew the probability of Red is 
+   1/3 each time.
+   Flip it once: #Red~Bernoulli(1/3)
+   Flip it twice: #Red~Binomial(2, 1/3)
+   P(0) = 4/9
+   P(1) = 4/9
+   P(2) = 1/9
+   
+   Example: Roll one die
+   Let W = number of showing P(w = 1) = 
+   = P(w = 2) = P(w = 3) = P(w = 4) =
+   P(w = 5) = P(w = 6) = 1/6
+   
+   Discrete uniform distribution
+   w is uniform on {1, 2, 3, 4, 5, 6}
+   
+   Example: Roll one die
+   Let w = number showing.
+   Then mean = 1 * 1/6 + 2*1/6 + 3*1/6 + 4*1/6 +
+   + 5 * 1/5 + 6*1/6 = 3.5
+   
+   Example: Flip two coins
+   Let y = total # heads
+   Then mean (or expected value) = E(Y) = 0 * 1/4 + 1 * 1/2 + 2*1/4 = 1
+   HH, HT, TT
+   
+Variance (theoretical world):
+-Spread of values or how far it tends to be from its mean.
+-Formula: variabce = sum(x-mean)**2 * P(x)
+ Example: Flip one coin
+ x = 1 if heads, or x = 0 if tails
+ Then the mean = 1/2
+ So variance = Var(x) = (1 - 1/2)**2*1/2 +
+  + (0 - 1/2)**2*1/2 = 1/4
+  Then SD = square root of variance = 1/2
+  
+  Example: Flip one die
+  Let w = number showing
+ (So w~Uniform {1, 2, 3, 4, 5, 6})
+ Then mean = 3.5
+ So, variance = (1 - 3.5)**2*1/6 + (2 - 3.5)**2*1/6 +
+ + (3 - 3.5)**2*1/6 + (4 - 3.5)**2*1/6 +
+ + (5 - 3.5)**2*1/6 + (6 - 3.5)**2*1/6 = 2.92
+ Then SD = square root of variance = 1.71
+ 
+ Properties:
+-Mean or expected value is linear
+E(aX + bY) = aE(X) + bE(Y)
+
+-Variance
+Var(aX) = a**2Var(X)
+SD(aX) = |a|SD(X)
+Var(aX + b) = a**2Var(X)
+Var(X + Y) = Var(X) + Var(Y)
+if X, Y are independent
+
+Discrete random variables: values can be listed
+Continuous random variable: values in an interval
+ -Continuous distribution example:
+ X~Uniform[0, 1]
+ P(0 <= X<=1) = 1
+ P(0 <= X<=1/3) = 1/3
+ P(0 <= X<=3/4) = 3/4 - 1/2 = 1/4
+ 
+ P(a <= X<=b) = b - a if 0 <= a <= b <= 1
+ P(X = a) = P(a <= X <=a) = a - a = 0
+ 
+Normal (Gaussian) density function:
+f(x) = 1/square root(2pi)e to the power of -x squared / 2
+
+General conclusions
+
+4. Long-run Averages
+1. Law of Large Numbers (LLN)
+If an experiment is repeated over and over, then the average result will converge to the experiment's expected value.
+(e.g. fraction of heads -> 1/2, and average dice value -> 3.5)
+2. Central Limit Theorem (CLT):
+If an experiment is repeated over and over, then the probabilities for the average result will converge to a Normal (bell-shaped) distribution.
+
+Quincunx - graphical display of Normal Distribution (Applet by David Krider)
+
+What about Mean and Variance?
+Suppose an experiment is repeated over and over, with outcomes: X1, X2, X3,...
+Suppose each mean is E(Xi) = m, and each variance is Var(Xi) = v.
+Let X = X1 + X2 + X3 + ... + Xn be the average outcome.
+Then 
+E(X) = E(X1) + E(X2) + ...+ E(Xn) /n = nm/n(squared) = m
+Var(X) = Var(X1) + Var(X2) + ... + Var(Xn) = nv/n2 = v/n
+
+5. Sampling Distributions
+ Parameter of Interest: p = P(heads) for one coin
+ Data: results of 10 flips of the coin
+ Estimate of p (p-hat): p = # of heads observed / # of flips
+ 
+ The observed value of an estimator varies from sample of data to sample of data. The variability is called the sampling variablity.
+ The probability distribution of the possible values of an estimator is its sampling distribution.
+ 
+  Outcome of one flip: X~Bernoulli(1/2)
+  X = {1 with probability 1/2}
+      {0 with probabilty 1/2}
+  E(X) = 1/2
+  
+  More generally, X~Bernoilli(p)
+  X = {1 with probability 1/2 p}
+      {0 with probabilty 1/2 1-p}
+  
+  E(X) = sum(x*P(x)) = 0*(1 - p) + 1 * p = p
+  
+  10 coin flips, 10 Bernoulli(p) experiments
+  Outcomes: X1, X2, ..., X10, 
+  Xi = {1 with prob. p}
+       {0 with prob. 1 - - p}
+  
+  Estimate of p: ^p = X1 + X2 + ... + X10 / 10 = X
+  ^p - p-hat
+  
+  Since E(Xi) = p, E(^p) = p
+  
+  ^p is an unbiased estimator of p
+  
+  A statistic used to estimate a parameter is unbiased if the expected value of its sampling distribution is equal to the value of the parameter being estimated.
+  Variance
+  X~Bernoulli(p),
+  X = {1 with probability 1/2 p}
+      {0 with probabilty 1/2 1-p}
+  Var(X) = sum(X - E(x))**2*P(X) = (1-p)**2*p +
+  + (0-p)**2*(1-p) = p - p**2 = p(1 - p)
+  
+  For n observations X1, ..., X10 with ^p = sum(Xi)/n
+  Since Var(X) = Var(Xi)/n
+  Var(^p) = p(1-p)/n
+  SD of ^p = square root of Var
+  
+  Interested in p, a proportion or the probability of an event with 2 outcomes
+  Estimator ^p, proportion of times see event in data
+  
+  Sampling distribution of ^p has expected value p and standard deviation square root (p(1 - p)/n)
+  By the Central Limit Theorem, for large n the sampling distribution is approximately
+  N(p, p(1 - p) / n)
+  
+  Theoretical world model: Normal distribution (N(expected value, variance))
+  Interested in expected value
+  n data values are independent observations from N(expected values, variance)
+  Estimator of expected value: X(bar) = X1 + X2 + ... + Xn / n
+  Expected value of X(bar): E(X(bar)) = expected value   
+ X(bar) is an unbiased estimator of expected value.
+ 
+ Variance of X(bar): Var(X(bar)) = Var**2/n
+ SD(X(bar)) = Var / square root(n)
+ 
+ If X1, X2, ..., Xn all have mean expected value (myu) and variance (sigma**2)
+ Sampling Distribution of X(bar) = sum(Xi) / n
+ E(X(bar)) = expected value
+ Var(X(bar)) = sigma**2/n
+ 
+ Using the Central Limit Theorem, 
+ X(bar) =~ N(Estimated value, sigma**2/n)
+  
+  

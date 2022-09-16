@@ -1,0 +1,91 @@
+Week 2
+
+RelationShips Between Quantitative and Categorical Variables - Five number summary comparison
+ Examining Relationships Between two Categorical Variables
+  The distribution of a variable is the pattern of values in the data for that variable, showing the frequency of occurence of the values relative to each other.
+  For a categorical variable, this is given by the frequencies or relative frequencies of the observations for each of the categories of the variable.
+  The joint distribution of two categorical variable is the frequency or relative frequency of the observations for the two variables considered together as a combination. (Contingency table or cross tabulation or two-way table)
+  The marginal distribution is the distribution of only one of the variables in a contingency table.
+  A conditional distribution of a categorical variable is its distribution within a fixed value of a second variable. Simpson's Paradox: Conditional distributions within subgroups can differ from condtitional distributions for combined observations.
+
+Relationships Between Two Quantitative Variables
+  Correlation
+  
+  Data Collection - Sampling
+
+  Statistical inference - making conclusions and decisions based on data.
+  Population - the group that we are interested in making conclusions about.
+  Census - a collection of data on the entire population.
+  Sample - a sample of the population.
+  A statistic is a value calculated from our observed data.
+  A parameter is a value that describes the theoretical world or the population that we're interested in.
+  When our data are measurements on a sample from a population, we need a representative sample in order to be able to generalize from the statistics calculated on the sample to the population parameters.
+  How to select a representative sample? Use randomisation? Some methods of random sample selection:
+   Simple Random Sampling (SRS) - Each possible sample of size n(the sample size) from the population is equally likely to be the sample that is chosen.
+   Stratified Sampling - Divide the population into non-overlaping subgroups called strata and choose a SRS within each subgroup.
+   Cluster Sampling - Divide the population into non-overlapping subgroups called clusters, select clusters at random, and include all individuals in the chosen clusters in the sample.
+   Systematic Sampling - Select every kth individual from a list of the population, where the position of the first person chosen is randomly selected from the k individuals. This will give a non-representative sample if there is a structure to the list.
+   Convenience or Volunteer Sampling - Use the first n individuals that are available or the individuals who volunteer to participate. This is almost sure to give a non-representative sample which cannot be generalized to the population.
+  A sample is biased if it differs from the population in a systematic way. Some types of bias:
+   Selection Bias - Occurs when the sample is selected in such a way that is systematically excludes or under-represents part of the population.
+   Measurement or Response Bias - Occurs when the data are collected in a such way that it tends to result in observed values that are different from the actual value in some systematic way.
+   Nonresponse Bias - Occurs when responses are not obtained from all individuals selected for inclusion in a sample.
+   
+ Data Collection - Observational Studies
+ Two (or more) groups
+ Response variable (or outcome) to be compared between the groups.
+ An explanatory variable is a variable that can be used to possibly explain the differences in the response variable between the groups.
+ What we want to avoid:
+ Confounding variables differ between the groups and may affect the response variable so we can't tell what causes the differences betweem the groups.
+ Data collection methods:
+  Anecdotes - Not useful for making any general conclusions.
+  Observational studies
+   Observe existing characteristics of a subset of individuals in a population (or populations).
+   The goal is either to draw conclusions about the population or about differences between two or more groups about the relationships between variables.
+   The investigator has no control over which individuals are in which group nor any other of their characteristics.
+  Five mechanisms to take into account for causal relationship between explanatory variable and the outcome:
+   Changes in the explanatory variable cause the outcome to change.
+   Reverse causation: Changes in the outcome cause the explanatory variable to change.
+   The association is a coincidence.
+   There is a common cause that causes both the explanatory variable and the outcome to change.
+   A confounding variable is associated with the explanatory variable and causes the outcome to change. It is impossible to know whether to attribute changes in the outcome to changes in the explanatory variable or the confounding variable.
+   Lurking variables are variables that are not considered in the analysis, but may affect the nature of the relationship between the explanatory variable and the outcome. A lurking variable can be a confounding variable, or the source of a common response, or another variable that, when considered, changes the nature of the association. 
+  
+  
+ Experiments - The advantage of the experiments over obserbational stduies is the strength of the causal conclusions we can make.
+ Interventions are imposed by the investigator on the subjects.
+   
+ Data Collection - Experiments
+ Response variable (or dependent variable) - The outcome of interest, measured on each subject on entity participating in the study.
+ Explanatory variable (or predictor or independent variable) - A variable that we think might help to explain the value of the response variable.
+ Experiment - The researcher manipulates the explanatory variables to see the effect on the response.
+ A categorical explanatory variable in an experiment is a factor. 
+ The values of a factor are its levels.
+ A particular combination of values for the factors is called a treatment.
+ An experimental unit is the smallest unit to which a treatment is applied.
+ Extraneous factors are not of interest in the current study, but are thought to affect the response.
+ How to control for an identified extraneous factor:
+  1. Hold it constant.
+  2. Blocking. Blocks are groups of experimental units that are similar. All treatments are assigned to experimental units within each block.
+ Use randomisation to assign experimental units to treatment groups. Once you have eliminated other differences between the treatment groups, if the resonse variables is different among the groups, the only explanation is the treatment and causal conclusions can be made.
+ 
+Fundamental principles of experimental design:
+1. Control
+2. Randomisation
+3. Replication
+
+A control group is used to make comparisons with a treatment of interest and either does not receive a treatment or receives the current standard treatment.
+
+Randomized controlled experiments are needed to establish causal conclusions.
+
+Blinding
+ -Not always possible.
+ -Purpose: to reduce the potential for bias
+ -Experimental units are blinded if they do not know what treatment they have received.
+  -The person measuring the response is blinded if he/she does not know which treatment was given to which experimental unit.
+  -Experiments can be single-blind(only one type of blinding) or double-blind (both types of blinding)
+  
+The Placebo effect
+ -People often show change when participating in an experiment, whether or not they receive a treatment.
+ -For this reason, the control group is often given a placebo.
+ -A placebo is something that is identical to the treatment received by the treatment groups, except that it contains no active ingredients.

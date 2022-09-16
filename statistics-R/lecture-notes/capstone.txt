@@ -1,0 +1,146 @@
+The process of Statistical inquiry
+"It is essential to understand the context. Which data? How collected? On whom? For what?"
+
+The sequence of steps in a study:
+ 1. Formulate clear, focused research questions.
+  Goal: prediction or understand the relationships between variables.
+ 2. Design and implement a study to acquire data that are relevant to the research questions.
+ 3. Examine the data for problems.
+ 4. Carry out preliminary and then formal analysis.
+ 5. Interpret and present the results.
+ 
+ Our Context
+ 
+Eat Carbohydrates --> Body makes glucose --> Gives you energy
+
+Bad carbs --> refined white floor, added sugar
+Good carbs --> foods that are rich in fiber
+
+Glycemic Index - how much a carbohydrate-rich food raises blood glucose.
+
+High GI foods - blood glucose levels reach a sharp quick peack and then have a fast decline
+Low GI foods - raise blood glucose levels slowly.
+
+GI Index effected by:
+ * type of starch
+ * the fat and acid content of the food
+ * how it is processed and cooked
+Foods that are easier to digest and are highly processed tend to have higher GI ratings. For example, white bread has a higher glycemic index than pumpernickel bread.
+
+Because low GI foods are slower to digest and absorb and they have smaller fluctuations in blood glucose associated with their consumption there are many health benefits associated with eating low GI foods:
+ * reduce risk of Type 2 diabetes
+ * better weight control
+ * reduce risk of heart disease
+
+-----------------------------------------------------
+ --Canadian trial of dieatry Carbohydrates in Diabetes (CCD)--
+ 
+The sequence of steps in a study:
+
+1. FORMULATE CLEAR, FOCUSED RESEARCH QUESTIONS.
+
+The hemoglobin A1c (HbA1c) test measures the amount of blood sugar (glucose) attached to your hemoglobin.
+
+Primary outcome variable:
+   The hemoglobin A1c (HbA1c) - the average amount of glucose in a person's blood over past 3 months
+   High level of HbA1c is an indicator of less blood glucose control.
+
+Secondary outcome variable:
+C-reactive protein (CRP) - The level of C-reactive protein (CRP) increases when there's inflammation in your body. A simple blood test can be done to check your C-reactive protein level.
+
+Other variables: Sex, age, and BMI (quantitative)
+
+----------------------------------------------------
+Primary objective: To compare, in subjects with type 2 diabetes treated with diet alone, the effects of 2 diets: (1) high carbohydrate, high GI, and (2) high carbohydrate, low GI, on HbA1C.
+
+Secondary objective: To compare, in subjects with type 2 diabetes treated with diet alone, the effects of 2 diets: (1) high carbohydate, high GI, (2) high carbohydrate, low GI, on level of C-reactive protein (CRP).
+
+Response variables: HbA1c (primary) and CRP (secondary)
+
+Explanatory variables: diet(main interest)
+
+Other explanatory variables: sex, age, BMI
+
+
+2. DESIGN AND IMPLEMENT A STUDY TO ACQUIRE DATA THAT ARE RELEVANT TO THE RESEARCH QUESTIONS.
+
+Goals:
+ * Be able to generalize conclusions
+ * Avoid bias
+ * Reduce error variation for more precise estimates
+ * Ensure that the sample size is appropriate
+ 
+What type of study should we carry out?
+Observational study:
+ Advantage: Observe natural diet and lifestyle of subjects.
+ Disadvantage: Possibility of common cause, confounding variables, ...
+ 
+Experiment:
+ Advantage: Can make causal conclusions.
+ Disadvantage: 
+ 
+ Experimental units: people with type 2 diabetes
+ Factor:  diet - 2 levels 2(treatments): high carb, high GI | high carb, low GI
+ 
+ Principles of experimental design:
+ 1. Control
+   Control of extraneous factors: Only study type 2 diabetics being treated by diet alone.
+   
+   Some inclusion criterial:
+   - age 35-75 years old
+   - BMI 25-40 kg/m**2
+   - HbA1c <= 130% upper limit of local lab normal
+   
+   Some exlusion criteria:
+   - taking diabetes medication
+   - serious recent medical event
+   - intolerance to study key foods
+   - extended holiday
+ 
+ Other possible ways to use control to reduce variation for more power to compare treatments:
+ - Use blocking - assign treatments within homegeneous groups
+ - Crossover study - each experimental unit follows each treatment, one after another (in randomly determined order) - not used in CCD. 
+   
+ 2. Randomisation
+ Use randomisation to avoid bias.
+ 
+ CCD: - convenience sample - not random selection of experimental units
+      - subjects randomly assigned to treatment - random assginment of treatments
+      - No blinding because it's impossible to disguise diet
+  
+ 3. Replication
+  How many subjects do we need so that an effect that we are interested in is likely to be statistically significant?
+  
+ To calculate sample size for a 2-sample t-test, we need:
+ * The desired power, .8
+ * The difference between treatment means that we are interested in, .004
+ * The estimated standard deviation of the difference in the means, .0066
+ * The significance level .05
+ 
+ Required sample size: 44 in each diet group
+ Allows for 20% dropout: Need 53 subject / diet or 106 total
+ 
+ CCD study design decisions:
+  Type of study: experiment
+  Experimental units: 106 subjects with type 2 diabetes being treated by diet alone, satisfying inclusion / exlusion criteria.
+  Randomisation: randomly assign subjects: high carb hiGI | high carb low GI
+  Other variables: sex, age, BMI
+  Outcome variables:  primary interest - HbA1c; secondary interest - CRP.
+  Compare between diet groups after 1 year.
+  
+ 3. EXAMINE THE DATA FOR PROBLEMS.
+Start with looking at one variable at a time:
+ - look for obvious errors
+ - identify features (outliers, skew, ...) that may effect choice of analysis
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 4. Carry out preliminary and then formal analysis.
+ 5. Interpret and present the results.
+ 
+ 
+ 

@@ -1,0 +1,225 @@
+1. Introduction to Statistical Tests
+2. The Structure of Statistical Tests
+ Statistical tests
+  Step 1
+  Court case analogy: Innocent until proven guilty
+  In statistics the presumption of innocence corresponds to hypothesis tests. 
+  The null hypothesis: H0 (H-naught)
+  The alternative hypothesis: HA or Ha or H1
+  Typically what we want to establish.
+  Conclude it's true if we have evidence against H0.
+  Alternatives can be one-sided (greater than or less than) or two-sided (not equal).
+  STEP 1: DETERMINE THE NULL HYPOTHESIS AND THE ALTERNATIVE HYPOTHESIS.
+  Step 2.
+  Court case analogy: The evidence
+  Summarise the data into a test statistic.
+  A test statistic is constructed assuming that H0, the null hypothesis, is true.
+  STEP2. COLLECT THE DATA AND CALCULATE A TEST STATISTIC.
+  Step 3.
+  Court case analogy: The deliberations
+                      Beyond a reasonable doubt?
+  Calculate the p-value.
+  A P-value is a number between 0 and 1 that quantifies the strength of the evidence against the null hypothesis.
+  Assuming H0 is true, how likely would it be to observe a test statistic of this magnitude or larger, just by chance?
+  The numerical answer to this question is the P-value.
+  The smaller the P-value is, the stronger the evidence against H0.
+  What a P-value does not tell you:
+  How likely it is that the null hypothesis is true.
+  H0 is ether true or is not true.
+  What a P-value does tell you:
+  How likely the observed data would be if the null hypothesis were true.
+  It's a measure of the strength of the evidence against the null hypothesis.
+  STEP 3. DETERMINE HOW UNLIKELY THE TEST STATISTIC IS IF THE NULL HYPOTHESIS IS TRUE. THIS IS THE P-VALUE.
+  Step 4.
+  Court case analogy: The verdict
+  Two choices for out conclusion:
+  1. P-value isn't small.
+  Conclude that the data are consistent with the null hypothesis.
+  2. P-value is small.
+  Sufficient evidence against H0 to reject it in favour of HA. The result statistically significant.
+  
+  Guidelines for how small is small:
+  P-value < 0.001        Very strong
+  0.001 < P-value < 0.01 Strong
+  0.01 < P-value < 0.05  Moderate
+  0.05 < P-value < 0.1   Weak
+  P-value > 0.1          None
+  STEP 4. MAKE A CONCLUSION BASED ON THE P-VALUE AND THE CONTEXT OF THE PROBLEM.
+  
+  FOUR STEPS OF A STATISTICAL TEST
+  STEP 1: DETERMINE THE NULL HYPOTHESIS AND THE ALTERNATIVE HYPOTHESIS.
+  STEP2. COLLECT THE DATA AND CALCULATE A TEST STATISTIC.
+  STEP 3. DETERMINE HOW UNLIKELY THE TEST STATISTIC IS IF THE NULL HYPOTHESIS IS TRUE. THIS IS THE P-VALUE.
+  STEP 4. MAKE A CONCLUSION BASED ON THE P-VALUE AND THE CONTEXT OF THE PROBLEM.
+  
+3. Hypothesis Testing for Proportions
+ Example: Toronto mayor expenses cut
+ n = 1046 people surveyed
+ 42% support the mayor
+ True support = p(unknown)
+ Estimated support = ^p = 0.42
+ H0: p = 0.5
+ HA: p < 0.5
+ Reject H0?
+ P-value
+ 
+ Theoretical world (assuming H0, i.e p = 0.5)
+ 
+^p - p / square root(p * (1 - p) / n) ~~ Normal(0, 1)
+
+ ^p - p / square root(0.5 * (1 - 0.5) / 1046) ~~ Normal(0, 1)
+ Observed (assuming H0) that ^p - p = 0.42 - 0.5 = -0.08
+ P-value = P(observing such an extreme value) (Under H0) = p(^p - p <= -0.08) = ^p - p / square root(0.5 * (1 - 0.5) / 1046) <= -0.08 / square root(0.5 * (1 - 0.5) / 1046) ~~ P(Normal(0, 1) <= -5.17) = 1/9000000.
+ Small!
+ Reject H0! Mayor'r support is less than 50%!
+ 
+ H0: p = 0.44
+ HA: p < 0.44 (one-sided)
+ 
+ ^p - p / square root(p * (1 - p) / n) ~~ Normal(0, 1)
+ ^p - p / square root(0.44 * (1 - 0.44) / 1046) ~~ Normal(0, 1)
+ Observed (assuming H0) that ^p - p = 0.42 - 0.44 = -0.02
+ P-value P(observing such an extreme value) (under H0) =
+ = P(^p - p <= -0.02) = P(^p - p / square root(0.44 * (1 - 0.44) / 1046) <= -0.02 / square root(0.44 * (1 - 0.44) / 1046)) ~~ P(Normal(0, 1) <= -1.30) = 0.0968 = 
+ = 9.68. Not too small.
+ 
+ Example: Flipping the beer cap. Is P(Red) = 50%
+  p = true probability of Red (unknown);
+  ^p = 576/1000 = 0.576
+  H0: p = 0.5
+  HA: p != 0.5 (two-sided)  
+ 
+  Observed (assuming H0) that ^p - p = 0.576 - 0.5 = 0.076.
+  P-value = P(observing such an extreme (absolute) value) = P(|^p - p| >= |0.076|) = P(|^p - p| / |square root(0.5 * (1 - 0.5) / 1000)| >= 0.07 / |square root(0.5 * (1 - 0.5) / 1000)| ~~ P(|Normal(0, 1)|>=4.81) = 2 * P(Normal(0, 1) <= -4.81) = 1 / 663000.
+  Small! 
+  So, reject H0. P(Red) does not equal 50%.
+  
+4. Hypothesis Testing for Means
+ Example: Plastic Surgery
+ Data: n = 60 observations
+ (#years they look younger)
+ Xbar = 7.177
+ s = 2.948
+ True mean = u(myu - unknown)
+ Estimated mean = Xbar
+ H0: u = 0
+ HA = U > 0
+ 
+ Theoretical world (assuming H0, i.e. u = 0):
+ Xbar - u / square roor(s squared/n) ~~ t subscript n-1
+ "t distribution with n - 1 degrees of freedom"
+ Observed: Xbar - u = 7.177 - 0 = 7.177
+ P-value = P(observing such an extreme value) (under H0) = P(Xbar - u >= 7.177) = P(Xbar - u/square root(s squared / n) >= 7.177 / square root(s squared / n)) ~~
+ P(t sub 59 >= 7.177 / square root(2.948 squared / 60) = P(sub 59 >= 18.86) = 
+ = 1 / 100000000000000000000000000
+ Extremely small! Reject H0! Conclusion: u > 0.
+ 
+ Example: Skeleton.
+ Xbar = -14.15
+ s = 14.13
+ H0: u = 0
+ HA = u != 0 (two-sided)
+ Assuming H0: Xbar - u / square root(s squared / n) ~~ t sub n-1 = t sub 399.
+ P-value = P(observing such an extreme value) (under H0) = P(|Xbar - u| >= |-14.15 - 0|) = P(|Xbar - u| / square root(s**2 / n) >= 14.15 / square root(14.13)**1 /400) ~~ P(|t sub 399| >= 20.03) = 2 * P(t sub 399 <= - 20.03) = 1 / 3.5*10 to the power of 61
+ Extremely small! Reject H0! Conclusion: u != 0.
+ 
+ Example: Body temperature.
+ Observations: n = 130 temperatures: 36.67, 37.22, ..
+ Xbar = 36.80513, s = 0.407324)
+ H0: u = 37
+ HA: u != 37 (two-sided)
+ 
+ Assuming H0, X bar - u / square root(s ** 2 / n) ~~ t sub n - 1 = t sub 129.
+ P-value = P(observe as extreme as: |36.80513 - 37| = |-0.19487|) = P(|Xbar - u| >= 0.19487) = P(|X bar - u| / square root (s**2 / n) >= 0.19487 / square root((0.407324)**2) / 130) ~~ P(|t sub 129| >= 5.455) = 2 * P(t sub 129 <= -5.455) = 1 / 4000000.
+ Extremely small! Reject H0! Conclusion u != 37.
+
+5. Power and Type 1 and Type 2 Errors
+
+ Statistical tests
+ H0: paramater = hypothesized value
+ HA: parameter > or < or != hypothesize value
+ 
+ Test statistic calculated from the data assuming H0 is true.
+ P-value: Assuming H0, the probability of observing the value of the test statistic we have, or a value more extreme.
+ Small P-values give evidence against H0.
+ 
+ The significance level of a test gives a cut-off for how small is small for a P-value. It is denoted by @ ("alpha").
+ If H0 is true, and you use a significance level of @ = 1%, and you carry out a test repeatedly, with a different sample of the same size each time, you will reject H0 (a wrong conclusion!) 1% of the time and not reject H0 99% of the time.
+ Choosing @ to be too small means you may never reject H0, even if the true value is very different from the null hypothesis value.
+ We want to be able to detect a false H0.
+ 
+ The power of a test is the probability of making a correct decision (by rejecting the null hypothesis) when the null hypothesis is false.
+ 
+ How to have higher power:
+ The power is higher the further the alternative value is away from the hypothesized by the null hypothesis.
+ A higher singificance level @ (alpha) gives higher power.
+ Less variability gives higher power.
+ The larger the sample size, the greater the power.
+ 
+ To determine the sample size needed for a study for which the goal is to get a significant result from a test, set @ and the desired power, decide on an alternative value that is practically interesting, estime sigma, and calculate the sample size necessary to give the desired power.
+ 
+ Two types of Errors in Statistical Testing
+ Type 1 error:
+ Reject H0 when it is true.
+ This happens with probability @.
+ Court case analogy: An innocent person is falsely convicted.
+ Type 2 error:
+ Fail to reject H0 when HA is true.
+ This happens with probability b (beta) = 1 - power.
+ Court case analogy: A criminal is erroneously freed.
+ 
+ Example: Disease testing.
+ H0. patient doesn't have disease.
+ H1. patient does have a disease.
+ 
+ @ (alpha) = P(test says patient has disease when he doesn't have disease.) Type 1 error.
+ b (beta) = P(test says patient does not have disiase when he does) (Type 2 error)
+ Which type of error is more serious? It depends..
+ 
+6. General Advice About Statistical Tests
+
+Some general advice about statistical tests
+ 1. Don't misinterpret P-values.
+ 
+ What a P-value does not tell you:
+  How likely it is that the null hypothesis is true.
+ 
+ What a P-value does tell you:
+  How likely the observed data would be if the null hypothesis were true.
+  
+  A P-value is a measure of the strength of the evidence, so report your P-values.
+  
+  2. Testing can not correct flaws in the design of the data collection.
+  
+  3. Always use 2-sided tests.
+   (Unless you are sure that one direction is of no interest.)
+  
+  4. Statistical significance is not the same thing as practical significance.
+  
+  A large P-value does not necessarily mean that the null hypothesis is true. There may not be enough power to reject it.
+  
+  Small P-values may occur:
+   By chance.
+   Because of problems related to data collection
+   Because of violations of the conditions necessary for the particular testing procedure being used.
+   Because the null hypothesis is false.
+   
+   If multiple tests are carried out, some are likely to be significant by chance alone.
+   For example, if @ = 0.05, we expect significant results 5% of the time, even when the null hypotheses are true.
+   Be suspicious when you see a few significant results when many tests have been carried out, for example significant results on a few subgroups of the data.
+   
+   Test results are not reliable if the statements of the hypotheses are suggested by the data. This is called data snooping.
+   
+   Hypotheses should be specified before any data are collected.
+   
+   Tests we have learned for proportions and means require:
+   * Independent observations,
+   * The sampling distributions of the estimators to be (approximately) normally distributed.
+   
+   A statistical test is robust if the P-value is approximately correct, even if the necessary conditions aren't completely satisfied.
+   For tests of proportions, larger sample sizes are needed the further the true value of p is from 0.5.
+   For tests of means, the t-test is robust, even for small sample sizes, except when there is extreme skew or outliers.
+   
+   5. Start with exploratory analysis using plots and summary statistics.
+   Testing can't correct flaws in data collection.
+   Statistical tests work well when applied to carefully designed studies with planned, focused hypotheses to investigate.
